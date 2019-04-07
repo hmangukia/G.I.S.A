@@ -162,12 +162,13 @@ def home(request):
 		features = find_features(top_words, text)
 		r_nb = NB_classifier.classify(features)
 		print(r_nb)
-		r_mnb = MNB_classifier.classify(features)
-		r_lr = LogisticRegression_classifier.classify(features)
+		"""r_mnb = MNB_classifier.classify(features)
+		r_lr = LogisticRegression_classifier.classify(features)"""
 
 		print("Gender identification ends")
 
-		return render(request, 'result.html', {'result': result, 'neg1': neg1, 'pos1': pos1, 'neu1': neu1, 'text': text, 'a_nb': a_nb, 'a_mnb': a_mnb, 'a_lr': a_lr, 'r_nb': r_nb, 'r_mnb': r_mnb, 'r_lr': r_lr})	
+		#return render(request, 'result.html', {'result': result, 'neg1': neg1, 'pos1': pos1, 'neu1': neu1, 'text': text, 'a_nb': a_nb, 'a_mnb': a_mnb, 'a_lr': a_lr, 'r_nb': r_nb, 'r_mnb': r_mnb, 'r_lr': r_lr})	
+		return render(request, 'result.html', {'neg1': neg1, 'pos1': pos1, 'neu1': neu1, 'text': text, 'a_nb': a_nb, 'r_nb': r_nb})	
 	else:
 		print("GET method")
 		return render(request, "home.html", {})
