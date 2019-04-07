@@ -1,0 +1,48 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head><title>Result</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+  <link href="https://fonts.googleapis.com/css?family=Coiny|Indie+Flower|Lobster|Nova+Flat|Pacifico" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Raleway|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+</head>
+  <body style="background: url('../static/homebackground.jpeg') ;">
+     <script src="../static/bootstrap-4.3.1-dist/js/jquery-1.11.3.min.js"></script>
+      <script src="../static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <div class="container-fluid" style="background-color: #d0d3d4 ;">
+  <br><h1 style="font-family: 'Nova Flat', cursive; font-size: 70px" align=center>G.I.S.A.</h1><br>
+</div><br><br>
+    <div style="font-family: 'Raleway', sans-serif; font-size: 25px; text-align: center;">
+    <b>The text entered is</b> {{text}}<br>
+    <b>Result for Sentimental Analysis is</b> <br>
+    <b>Positive:</b> {{pos1}}<br>
+    <b>Negative:</b> {{neg1}}<br>
+    <b>Neutral:</b> {{neu1}}<br><br>
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#nb">Naive Bayes</a></li>
+    <li><a data-toggle="tab" href="#mnb">Multinomial Naive Bayes</a></li>
+    <li><a data-toggle="tab" href="#lr">Logistic Regression</a></li>
+    </ul>
+    <div class="tab-content">
+    <div id="nb" class="tab-pane fade in active">
+      <h3>Naive Bayes</h3>
+      <p>Accuracy: {{a_nb}}</p>
+      <p>Result: {{r_nb}}</p>
+    </div>
+    <div id="mnb" class="tab-pane fade in active">
+      <h3>Multinomial Naive Bayes</h3>
+      <p>Accuracy: {{a_mnb}}</p>
+      <p>Result: {{r_mnb}}</p>
+    </div>
+    <div id="lr" class="tab-pane fade in active">
+      <h3>Logistic Regression</h3>
+      <p>Accuracy: {{a_lr}}</p>
+      <p>Result: {{r_lr}}</p>
+    </div>
+    </div>
+  </body>
+</html>
