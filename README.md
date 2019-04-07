@@ -12,7 +12,7 @@
 
 ### What is G.I.S.A.?
 
-G.I.S.A. - Gender Identification and Sentimental Analysis is a web application made on [Django](https://www.djangoproject.com/). Basically, a block of text is to be entered in the text box. It gives the output of Sentimental Analysis classified into three parts: positive, negative and neutral. It also identifies the gender of the person by whom the text is written and tells us whether it is mail or female. Both of these is done using Naive Bayes Classifier of [NLTK](https://www.nltk.org/). Presently a lot of applications are available for Sentimental Analysis and Gender Identification, but most of them are either voice based or based on facial features. G.I.S.A. is a text based system, so we just need a block of text written by the person we want to perform analysis on.
+G.I.S.A. - Gender Identification and Sentimental Analysis is a web application made on [Django](https://www.djangoproject.com/). Basically, a block of text is to be entered in the text box. It gives the output of Sentimental Analysis classified into three parts: positive, negative and neutral. It also identifies the gender of the person by whom the text is written and tells us whether it is male or female. Both of these is done using Naive Bayes Classifier of [NLTK](https://www.nltk.org/). Presently a lot of applications are available for Sentimental Analysis and Gender Identification, but most of them are either voice based or based on facial features. G.I.S.A. is a text based system, so we just need a block of text written by the person we want to perform analysis on.
 
 #### Why G.I.S.A.?
 
