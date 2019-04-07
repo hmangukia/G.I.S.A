@@ -21,7 +21,7 @@ def home(request):
 		return dict([(word, True) for word in words])
 
 	if request.method == 'POST':
-		df = pd.read_csv('/home/hetal/Desktop/twideep/gender_identification/SE.csv', encoding = 'latin1')
+		df = pd.read_csv('Path of SE.csv', encoding = 'latin1')
 		df.head(10)
 		positive_vocab = df['positive_vocab']
 		negative_vocab = df['negative_vocab']
@@ -63,7 +63,7 @@ def home(request):
 
 		print("Gender identification starts")
 		#text = Data.objects.get(pk=pk)
-		df = pd.read_csv('/home/hetal/twideep/gender_identification/gender-classifier-DFE-791531.csv', encoding = 'latin1')
+		df = pd.read_csv('Path of gender-classifier-DFE-791531.csv', encoding = 'latin1')
 		#df = shuffle(shuffle(shuffle(df)))
 		df.head(10)
 
@@ -147,7 +147,7 @@ def home(request):
 		#NB_classifier.show_most_informative_features(20)
 
 		# creating a multinomial naive bayes classifier
-		MNB_classifier = SklearnClassifier(MultinomialNB())
+		"""MNB_classifier = SklearnClassifier(MultinomialNB())
 		MNB_classifier.train(training_set)
 		a_mnb = nltk.classify.accuracy(MNB_classifier, testing_set)*100
 		print("Multinomial Naive Bayes Classifier accuracy =", (a_mnb))
@@ -156,7 +156,7 @@ def home(request):
 		LogisticRegression_classifier = SklearnClassifier(LogisticRegression())
 		LogisticRegression_classifier.train(training_set)
 		a_lr = nltk.classify.accuracy(LogisticRegression_classifier, testing_set)*100
-		print("Logistic Regression classifier accuracy =", a_lr)
+		print("Logistic Regression classifier accuracy =", a_lr)"""
 
 		text = request.POST['text'].strip()
 		features = find_features(top_words, text)
